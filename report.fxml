@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@reportstyle.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="report.ReportController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="2.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../IMAGES/All%20background.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="2.0" layoutY="208.0" mnemonicParsing="false" onAction="#dash" prefHeight="25.0" prefWidth="280.0" text="Dashboard">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button layoutX="2.0" layoutY="273.0" mnemonicParsing="false" onAction="#cust" prefHeight="25.0" prefWidth="280.0" text="Customers">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button layoutX="1.0" layoutY="343.0" mnemonicParsing="false" onAction="#meas" prefHeight="25.0" prefWidth="280.0" text="Measurements">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button layoutX="2.0" layoutY="412.0" mnemonicParsing="false" onAction="#tail" prefHeight="25.0" prefWidth="280.0" text="Tailors">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button layoutX="2.0" layoutY="480.0" mnemonicParsing="false" onAction="#ord" prefHeight="25.0" prefWidth="280.0" text="Orders">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button layoutX="3.0" layoutY="549.0" mnemonicParsing="false" onAction="#bill" prefHeight="25.0" prefWidth="280.0" text="Billing">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="rep" layoutX="2.0" layoutY="619.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="280.0" stylesheets="@reportstyle.css" text="Report">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="set" layoutX="2.0" layoutY="686.0" mnemonicParsing="false" onAction="#setbt" prefHeight="52.0" prefWidth="279.0" text="Setting">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button layoutX="2.0" layoutY="756.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="280.0" text="Logout">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Text fill="#c2185b" layoutX="373.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports &amp; Analytics">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="373.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Track buisness performance and insights">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="422.0" layoutY="193.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FCE3ED;">
+         <children>
+            <Text fill="#c2185b" layoutX="52.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Orders">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="14.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMAGES/icons8-box-64.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblTotalOrders" layoutX="67.0" layoutY="82.0" text="Label" textFill="#c2185b">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="745.0" layoutY="193.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: E8DDFC;">
+         <children>
+            <Text fill="#4f2daa" layoutX="47.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Revenue">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="19.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMAGES/icons8-rupees-64.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblTotalRevenue" layoutX="74.0" layoutY="80.0" text="Label" textFill="#4f2daa">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1085.0" layoutY="184.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: EFFAF0;">
+         <children>
+            <Text fill="#4caf50" layoutX="50.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Tailors">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <ImageView fitHeight="66.0" fitWidth="39.0" layoutX="5.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMAGES/icons8-overlock-machine-50.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblActiveTailors" layoutX="70.0" layoutY="80.0" text="Label" textFill="#4caf50">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1432.0" layoutY="191.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFC8C0;">
+         <children>
+            <Text fill="#fa0f0f" layoutX="62.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Bills">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <ImageView fitHeight="51.0" fitWidth="39.0" layoutX="13.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMAGES/icons8-bill-48.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblTotalBills" layoutX="73.0" layoutY="81.0" text="Label" textFill="#fa0f0f">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="380.0" layoutY="433.0" prefHeight="649.0" prefWidth="623.0" style="-fx-background-color: #FFF;">
+         <children>
+            <Text fill="#c2185b" layoutX="11.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top Services by Revenue">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TableView fx:id="topServicesTable" layoutX="65.0" layoutY="68.0" prefHeight="509.0" prefWidth="494.0">
+               <columns>
+                  <TableColumn fx:id="colTSno" prefWidth="75.0" text="SNo" />
+                  <TableColumn fx:id="colTService" prefWidth="75.0" text="Service" />
+                  <TableColumn fx:id="colTOrders" prefWidth="75.0" text="Orders" />
+                  <TableColumn fx:id="colTRevenue" prefWidth="131.0" text="Revenue" />
+                  <TableColumn fx:id="colTPercentage" prefWidth="136.0" text="Percentage(%)" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1084.0" layoutY="435.0" prefHeight="647.0" prefWidth="623.0" style="-fx-background-color: #FFF;">
+         <children>
+            <Text fill="#c2185b" layoutX="11.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recent Order Summary">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TableView fx:id="recentOrdersTable" layoutX="76.0" layoutY="69.0" prefHeight="504.0" prefWidth="494.0">
+               <columns>
+                  <TableColumn fx:id="colRDate" prefWidth="91.0" text="Date" />
+                  <TableColumn fx:id="colROrderId" prefWidth="93.666748046875" text="Order Id" />
+                  <TableColumn fx:id="colRCustomer" prefWidth="79.333251953125" text="Customer" />
+                  <TableColumn fx:id="colRAmount" prefWidth="96.3333740234375" text="Amount" />
+                  <TableColumn fx:id="colRStatus" prefWidth="132.0" text="Status" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Text fill="#c2185b" layoutX="29.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mahali designs">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
